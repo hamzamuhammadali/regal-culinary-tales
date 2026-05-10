@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, Twitter, Mail, Phone, MapPin } from "lucide-react";
 import { SITE } from "@/lib/site-data";
+import logo from "@/assets/foodex-logo.png";
 
 export function Footer() {
   return (
