@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "@/assets/foodex-logo.png";
 
 const links = [
   { to: "/", label: "Home" },
@@ -31,12 +32,17 @@ export function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
-        <Link to="/" className="group flex items-center gap-2">
-          <span className="font-serif text-2xl font-semibold tracking-wide text-foreground">
-            Foodex<span className="text-gold">.</span>
+        <Link to="/" className="group flex items-center gap-3">
+          <span className="relative grid h-11 w-11 place-items-center overflow-hidden rounded-full ring-1 ring-gold/40 transition-all group-hover:ring-gold">
+            <img src={logo} alt="Foodex Group logo" width={44} height={44} className="h-full w-full object-cover" />
           </span>
-          <span className="hidden text-[10px] uppercase tracking-[0.3em] text-muted-foreground sm:block">
-            Group
+          <span className="flex flex-col leading-tight">
+            <span className="font-serif text-xl font-semibold tracking-wide text-foreground">
+              Foodex<span className="text-gold">.</span>
+            </span>
+            <span className="hidden text-[9px] uppercase tracking-[0.3em] text-muted-foreground sm:block">
+              Group of Restaurants
+            </span>
           </span>
         </Link>
 

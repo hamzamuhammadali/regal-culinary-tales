@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, Twitter, Mail, Phone, MapPin } from "lucide-react";
 import { SITE } from "@/lib/site-data";
+import logo from "@/assets/foodex-logo.png";
 
 export function Footer() {
   return (
@@ -8,8 +9,11 @@ export function Footer() {
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
       <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-4">
         <div>
-          <div className="font-serif text-3xl">
-            Foodex<span className="text-gold">.</span>
+          <div className="flex items-center gap-3">
+            <img src={logo} alt="Foodex Group logo" width={56} height={56} className="h-14 w-14 rounded-full object-cover ring-1 ring-gold/40" />
+            <div className="font-serif text-3xl">
+              Foodex<span className="text-gold">.</span>
+            </div>
           </div>
           <p className="mt-4 max-w-xs text-sm text-muted-foreground">
             {SITE.tagline}. Crafting culinary memories across the UAE since {SITE.established}.
